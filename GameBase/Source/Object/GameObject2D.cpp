@@ -118,7 +118,10 @@ std::shared_ptr<GameObject> GameObject2D::Update()
 
 void GameObject2D::Draw() const
 {
-	DrawRotaGraphF(mPos.x, mPos.y, mScale, mAngle, mGraphicHandle, true);
+	if (DrawRotaGraphF(mPos.x, mPos.y, mScale, mAngle, mGraphicHandle, true) == -1)
+	{
+		DrawFormatStringF(mPos.x, mPos.y, 0xffffff, "GameObject");
+	}
 }
 
 std::shared_ptr<GameObject2D> GameObject2D::Create()

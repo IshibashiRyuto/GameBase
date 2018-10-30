@@ -131,6 +131,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Object\GameObject3D.cpp" />
+    <ClCompile Include="Source\Sound\SoundLoader.cpp" />
+    <ClCompile Include="Source\Sound\SoundManager.cpp" />
     <ClCompile Include="Source\Object\GameObject2D.cpp" />
     <ClCompile Include="Source\Object\GameObject.cpp" />
     <ClCompile Include="Gamepad.cpp" />
@@ -151,6 +154,9 @@
     <ClCompile Include="Source\Scene\TransitionScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Object\GameObject3D.h" />
+    <ClInclude Include="Source\Sound\SoundLoader.h" />
+    <ClInclude Include="Source\Sound\SoundManager.h" />
     <ClInclude Include="Source\Object\GameObject2D.h" />
     <ClInclude Include="Source\Object\GameObject.h" />
     <ClInclude Include="Gamepad.h" />

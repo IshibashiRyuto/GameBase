@@ -16,6 +16,16 @@ public:
 	/// @brief	デストラクタ
 	virtual ~GameObject2D();
 
+	/// @brief	更新処理
+	std::shared_ptr<GameObject> Update();
+
+	/// @brief	描画処理
+	void Draw() const;
+
+	/// @brief	ゲームオブジェクトを生成する
+	static std::shared_ptr<GameObject2D> Create();
+
+
 	/// @brief	オブジェクトを指定位置にセットする
 	///	@param[in]	pos	: オブジェクトの位置
 	void SetPos(const Math::Vector2& pos);
@@ -88,20 +98,11 @@ public:
 	///	@param[in]	scale	: 拡大率
 	void SetScale(float scale);
 
-	/// @brief	更新処理
-	std::shared_ptr<GameObject> Update();
-
-	/// @brief	描画処理
-	void Draw() const;
-
-	/// @brief	ゲームオブジェクトを生成する
-	static std::shared_ptr<GameObject2D> Create();
-
 	/// @brief	画像データをセットする
 	///	@param[in]	グラフィックハンドル
 	void SetGraphic(int graHandle);
 
-private:
+protected:
 	/* 変数宣言 */
 	Math::Vector2	mPos;			//! 位置
 	Math::Vector2	mVel;			//! 速度
@@ -114,7 +115,5 @@ private:
 	/* ローカルメソッド定義 */
 	///	@brief	コンストラクタ
 	GameObject2D();
-
-
 };
 
